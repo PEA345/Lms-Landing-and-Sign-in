@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>uniportlearning/signup</title>
+    <link rel="stylesheet" href="signupstyle.css">
+</head>
+<body>
+    <div class="signup-container">
+        <h2 style="font-size: 30px; text-decoration: none;">UNIPORT LEARNING</h2>
+        <h2>Sign Up</h2>
+        <form id="signup-form" action="/submit_signup" method="POST">
+            <label for="user-type">I am a:</label>
+            <select id="user-type" name="user-type" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="student">Student</option>
+                <option value="staff">Staff</option>
+            </select>
+            
+            <div id="common-fields">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="password">Create Password</label>
+                <input type="password" id="password" name="password" required>
+                
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+            
+            <div id="student-fields" class="hidden">
+                <label for="student-id">Matriculation Number</label>
+                <input type="text" id="student-id" name="student-id">
+                
+                <label for="faculty">Faculty</label>
+                <select id="faculty" name="faculty" required>
+                    <option value="" disabled selected>Select a faculty</option>
+                    <option value="engineering">Engineering</option>
+                    <option value="social-sciences">Social Sciences</option>
+                    <option value="health-sciences">College of Health Sciences</option>
+                    <option value="science">Science</option>
+                    <option value="agriculture">Agriculture</option>
+                </select>
+
+                <label for="department">Department</label>
+                <select id="department" name="department" required class="hidden">
+                    <option value="" disabled selected>Select a department</option>
+                    <option value="electronics-engineering">Electronics Engineering</option>
+                    <option value="electrical-engineering">Electrical Engineering</option>
+                    <option value="mechanical-engineering">Mechanical Engineering</option>
+                    <option value="mechatronics-engineering">Mechatronics Engineering</option>
+                    <option value="petroleum-engineering">Petroleum Engineering</option>
+                    <option value="gas-engineering">Gas Engineering</option>
+                    <option value="chemical-engineering">Chemical Engineering</option>
+                    <option value="civil-engineering">Civil Engineering</option>
+                    <option value="environmental-engineering">Environmental Engineering</option>
+                </select>
+            </div>
+            
+            <div id="staff-fields" class="hidden">
+                <label for="staff-id">Staff ID</label>
+                <input type="text" id="staff-id" name="staff-id">
+
+                <label for="faculty">Faculty</label>
+                <select id="faculty" name="faculty" required>
+                    <option value="" disabled selected>Select a faculty</option>
+                    <option value="engineering">Engineering</option>
+                    <option value="social-sciences">Social Sciences</option>
+                    <option value="health-sciences">College of Health Sciences</option>
+                    <option value="science">Science</option>
+                    <option value="agriculture">Agriculture</option>
+                </select>
+                
+                <label for="department">Department</label>
+                <select id="department" name="department" required class="hidden">
+                    <option value="" disabled selected>Select a department</option>
+                    <option value="electronics-engineering">Electronics Engineering</option>
+                    <option value="electrical-engineering">Electrical Engineering</option>
+                    <option value="mechanical-engineering">Mechanical Engineering</option>
+                    <option value="mechatronics-engineering">Mechatronics Engineering</option>
+                    <option value="petroleum-engineering">Petroleum Engineering</option>
+                    <option value="gas-engineering">Gas Engineering</option>
+                    <option value="chemical-engineering">Chemical Engineering</option>
+                    <option value="civil-engineering">Civil Engineering</option>
+                    <option value="environmental-engineering">Environmental Engineering</option>
+                </select>
+            </div>
+
+            
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+
+    <script src="signup.js"></script>
+</body>
+</html>
